@@ -1,0 +1,168 @@
+Exo-1
+# Écrire un algorithme qui affiche tous les nombres pairs compris entre 1 et 100.
+
+"Mon premier code filou tête en l'air corrigé "
+for (i = 1; i <= 100; i+2)
+{
+    i = 2
+    afficher(i)
+}
+= = = = = = = = "Mon code rectifié" = = = = = = = = = = 
+for(i = 1; i <= 100; i++)
+{
+    if(i % 2 === 0)
+    afficher(i)
+}
+
+Exo-2
+# Écrire une fonction qui affiche les nombres deux chiffres passés en paramètre
+# Exemple : afficheEntier(2, 7)
+# Résultat : 2 3 4 5 6 7
+
+fonction afficherPlageDeNb(nb1, nb2)" Penser à bien nommer les variables depart arrivee"
+{
+    if(nb1 < nb2)
+    {
+        variable iterateur = nb1
+        while (iterateur <= nb2)
+        {
+            afficher(iterateur)
+            iterateur ++
+        }
+    }
+}
+
+fonction afficheEntier(depart,arrivee)
+{
+    for (i=depart; i<arrivee; i++)
+    {
+        afficher(i)
+    }
+}
+
+afficherPlageDeNb(3, 15)
+
+Exo-3
+# Écrire un algorithme qui recherche la valeur maximale dans un tableau de nombres.
+# exemple de tableau :
+# variable mesNombres = [2, 18,42,128,7,34]
+# Votre algo doit afficher 128 qui est le plus grand entier du tableau
+
+variable monTableauDeNb[3, 6, 2, 50, 16, 21, 36]
+
+
+fonction chercherValMax(monTableauDeNb)
+{
+    variable lePlusGdNb = 0
+    variable iterateur = 0
+    while(iterateur < count(monTableauNb)) # faire la même chose avec une boucle for
+    {
+        if(monTableauDeNb[iterateur] > lePlusGdNb)
+        {
+            lePlusGdNb = monTableauDeNb[iterateur]
+        }
+        iterateur ++
+    }
+    retourner lePlusGdNb
+}
+
+chercherValMax(monTableauDeNb)
+
+Exo-4
+# Écrire un algorithme qui remplace un élément donné dans un tableau par une nouvelle valeur.
+# Exemple :
+# variable tableau = [“toto”,”titi”, “tutu”]
+# remplaceTableau(“toto”, “yoyo”, tableau) Résultat : tableau = [“yoyo”,”titi”, “tutu”]
+
+variable inventairePrevert[12, "escargot", "maquette", FALSE, 'A', 7.5, "mandoline", "feuilles mortes"]
+
+for(i = 0; i < count(false, true, inventairePrevert); i++)
+{
+    if(inventairePrevert[i] === FALSE){
+        inventairePrevert[i] = TRUE
+    }
+}
+afficher(monTableauDivers)
+
+Exo-5
+# Créer un programme qui affiche la position d’une flèche en fonction d’un nombre passé en paramètre compris entre 1 et 4.
+"   1 => haut
+    2 => bas
+    3 => gauche
+    4 => droite
+"# Pour celà, vous devez utiliser la structure switch
+"Exemple : 
+    positionFleche(1) 
+    Résultat : haut"
+
+fonction afficherDirection(nb)
+{
+    variable direction = ""
+
+    switch(nb)
+    {
+        case 1:
+            direction = "haut"
+        break;
+        case 2:
+            direction = "bas"
+        break;
+        case 3:
+            direction = "gauche"
+        break;
+        case 4:
+            direction = "droite"
+        break;
+        default:
+            direction = "Entrer 1 pour haut, 2 pours bas, 3 pour gauche et 4 pour droite"
+    }
+}
+
+Exo-6
+# Ecrire une fonction puissance.
+"Exemple :
+Puissance(2, 3)
+Résultat : 8
+Le calcul effectué est 2 puissance 3 soit 2*2*2"
+
+fonction calculerPuissance(nb1, nb2)
+{
+    variable resultat = nb1
+    for(i = 0; i < nb2 ; i++)
+    {
+        if(nb1 >= 1 && nb2 > 0)
+        {
+            variable resultat *= nb1
+        }
+    }
+    retourner resultat
+}
+
+calculerPuissance(2,3)
+
+Exo-7
+# Sur le principe du juste prix, créer une fonction qui prend en paramètre 2 chiffres 
+# et qui donne une indication sur la position du premier par rapport au deuxième.
+"Exemple : 
+    justePrix(5,50) 
+    Réponse : C’est + justePrix(55,50) 
+    Réponse : C’est - justePrix(50,50) 
+    Réponse : Bravo !
+"
+
+fonction justePrix(nb,nbATrouver)
+{
+    # variable nbATrouver = 3.69
+    if(nb > nbATrouver){
+        afficher("C'est moins")
+    }
+    else if(nb < nbATrouver)
+    {
+        afficher("C'est plus")            
+    }
+    else
+    {
+        afficher("Bravo !")
+    }
+}
+justePrix(12)
