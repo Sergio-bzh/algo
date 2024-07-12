@@ -1,0 +1,161 @@
+Exo-1
+# "Écrire un algorithme qui va stocker dans un tableau trois fruits :"
+"Une pomme, une poire, un ananas"
+
+variable tabFruits (array)
+
+fruit-1 <- "Une pomme"
+fruit-2 <- "une poire"
+fruit-3 <- "un ananas"
+
+fonction remplirTableau(fruit-1, fruit-2, fruit-3)
+{
+    tabFruits[0] <- fruit-1
+    tabFruits[1] <- fruit-2
+    tabFruits[2] <- fruit-3
+}
+
+remplirTableau("cerise", "abricot", "raisin")
+
+Exo-2
+# Fonctions autorisées pour l'exercice : 
+"write(char)" # cette fonction permet d'écrire le caractère passer en paramètre. Il est impossible de lui passer en paramètre autre chose.
+"strlen(string)" # vous donne le nombre de caractères de la chaîne passée en paramètre. 
+# Votre mission, écrire une fonction qui permet d'écrire une chaîne de caractères.
+
+fonction ecrireChaineA(input)
+{
+    variable compteur <- 0
+
+    while compteur < strlen(input)
+    {
+        write(input[compteur])
+    }
+    compteur += 1
+}
+
+ecrireChaineA("Vive l'amour et l'amitié qui est aussi de l'amour !")
+
+= = = = = = = = = = Ci dessous exemple usine à gaz = = = = = = = = = = = = 
+
+variable maChaine <- ""
+variable tabCarateres <- ['C','e','c','i','_','e','s','t','_','u','n','e','_','c','h','a','i','n','e']
+
+fonction ecrireChaineB(tabCarateres)
+{
+    variable incrementeur <- 0
+    while incrementeur < count(tabCarateres)
+    {
+        maChaine <- write(tabCarateres[incrementeur])
+        incrementeur <- incrementeur + 1
+    }
+}
+
+ecrireChaineB(maChaine)
+
+Exo-3
+# Écrire une fonction qui va afficher un caractère sur deux d'une chaîne de caractère. 
+# Exemple : ecrireSpecial(“Bonjour”) Résultat : “Bnor”
+
+variable motEntier <- "Anticonstutionnellement"
+
+fonction afficherUnSurDeux-A(motEntier)
+{
+    # Déclaration des variables
+    variable compteur <- 0
+
+    while compteur < strlen(motEntier)
+    {
+        write(motEntier[compteur]) 
+        compteur +=2
+    }
+}
+# Variant plus lisible selon moi mais consommant plus de ressources
+fonction afficherUnSurDeux-B(motEntier)
+{
+    # Déclaration des variables
+    variable compteur <- 0
+    variable motPartiel (array)
+
+    while compteur <= strlen(motEntier)
+    {
+        motPartiel <- write(compteur) 
+        compteur +=2
+        retourner motPartiel
+    }
+    afficher motPartiel
+}
+
+Exo-4
+# Fonctions autorisées pour l'exercice :
+"count(tableau)"
+# Cette fonction indique le nombre d'éléments présents dans le tableau passé en paramètre 
+# Écrire une fonction qui affiche les éléments présents dans un tableau. vous testerez cette fonction à l'aide de la variable fruits de l'exercice 1
+"Je n'avais pas créé de variable fuits dans l'éxercice 1 :-( "
+
+variable fruits <- ["pomme", "poire", "ananas"]
+
+fonction afficherFruit(fruits)
+{
+    compteur <- 0
+    # mot <- ""
+    while compteur < count(fruits)
+    {
+       afficher fruits[compteur]
+        compteur ++
+        # afficher mot
+    }
+}
+
+Exo-5
+# Résoudre ses opérations logique:
+TRUE && TRUE && TRUE && FALSE : faux
+FALSE || TRUE || TRUE : vrai
+FALSE || FALSE : faux
+FALSE && TRUE : faux
+42 == 42,00 : vrai
+42 === 42,00 : faux
+!FALSE && TRUE : vrai
+
+Exo-6
+# Sans utiliser de fonction autre que celle abordées dans les exercices précédents, 
+# écrivez une fonction qui remplace une lettre par une autre dans une chaîne de caractère passée en paramètres.
+# Exemple :
+# myReplace(‘e’, ‘z’, “hello la team”) résultat : “Hzllo la tzam”
+
+variable maChaine <- "Hello la team"
+"variable lettreRecherchee <- 'e'"
+"variable lettreDeRemplacement <- 'z'"
+
+# Fonction non destructive pour la variable d'origine
+fonction remplacerLettre(lettreRecherchee, lettreDeRemplacement, maChaine)
+{
+    variable compteur <- 0
+    variable maChaineModifiee <- maChaine
+
+    while compteur < count(maChaineModifiee)
+        if maChaineModifiee[compteur] === lettreRecherchee
+        {
+            maChaineModifiee[compteur] <- lettreDeRemplacement
+        }
+    compteur ++
+    retourner maChaineModifiee
+}
+
+remplacerLettre('e', 'z', maChaine)
+
+
+
+
+
+
+
+fonction afficherNbPairs(nb1, nb2)
+{
+    compteur = 0
+    if(nb1 < nb2){
+        while(compteur > nb2)
+            if(compteur%)
+        compteur ++
+    }
+}
