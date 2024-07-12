@@ -1,0 +1,87 @@
+Exo-1
+fonction calculerSurfaceRectangle(longeur, largeur)
+{
+    surface <- longeur * largeur
+    retourner surface
+}
+
+Exo2
+fonction calculerVolume(surface, bool)
+{
+    hauteur <- 1.37
+
+    fonction definirHauteur(bool)
+    {
+        si bool = true
+        {
+            retourner 1.37
+        }
+        sinon
+        {
+            retourner <- 4.42
+        }
+    }
+
+    hauteur <- definirHauteur(bool)
+    volume <- surface * hauteur
+    retourner volume
+}
+
+Exo3
+fonction filtrerEntreeSalle(age, accompagnateur = false)
+{
+    estMajeur <- false
+    Si age >= 18
+    {
+        estMajeur <- true
+    }
+    si estMajeur = true
+    {
+        retourner "Accès autorisé"
+    }
+    sinon si age > 16 et age <18 et accompagnateur = true
+    {
+        retourner "Accès autorisé"
+    }
+    sinon
+    {
+        retourner "Accès refusé"
+    }
+}
+
+Exo4
+fonction retournerCarre(chiffre)
+{
+    // Calcule le carré
+    carre <- chiffre * chiffre
+
+    // Retourne le carré du chiffre entré
+    retourner carre
+}
+
+Exo5
+fonction calculerIMC(poids, taille)
+{
+    si poids < 1000
+    {
+        retourner "Assurez vous de bien entrer votre poids en grames !"
+    }
+    si taille < 100
+    {
+        retourner "Assurez-vous d'entrer votre taille en centimètres !"
+    }
+
+    Si taille >= 101 et taille <= 220
+    {
+        // "Conversion de la taille en mètres et du poids en Kilogrammes"
+        poid <- poids / 1000
+        taille <- taille / 100
+
+        // "L'IMC est calculé en divisant le poids par la taille au carré"
+        imc <- poids / (taille * taille)
+        retourner "Votre IMC est de : " imc
+    }
+    sino {
+        retourner "Pour calculer votre IMC la taille doit être comprise entre 101 et 220 cm"
+    }
+}
